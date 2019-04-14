@@ -33,7 +33,7 @@ func UploadHandler(w http.ResponseWriter, r *http.Request) {
 
 		filemate := meta.FileMeta{
 			FileName: head.Filename,
-			Location: "/home/unbuntu/tmp/" + head.Filename,
+			Location: "/home/unbuntu/GolandProjects/tep/" + head.Filename,
 			UploadAt: time.Now().Format("2006-01-01 15:04:09"),
 		}
 
