@@ -88,10 +88,14 @@
         "username": username.value,
         "password": password.value
       },
-      error: function (err) {
+      error: function (jqXHR, textStatus, errorThrown) {
+        if (textStatus == "error") {
+          alert(textStatus + " : " + errorThrown);
+        } else {
           alert(textStatus);
+        }
       },
-      success: function (data) {
+      success: function (data, textStatus, jqXHR) {
         if (data == 'SUCCESS') {
           // 成功后跳到登录页
           document.getElementById("login_hint").style.display = "block";
@@ -106,4 +110,5 @@
     });
   }
 </script>
+
 </html>
